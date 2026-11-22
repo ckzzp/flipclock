@@ -27947,3 +27947,19 @@ page-themes ion-content.slate .flip-clock-wrapper ul.play li.flip-clock-active .
     font-size: 30vh !important;
   }
 }
+
+/* Keep the middle dots centred on the card when the wide-screen rule above
+   changes the card height: the divider carries the cards' 1vw top margin and
+   the same height, so the two dots straddle the card's centre line. */
+@media (min-aspect-ratio: 19/10) {
+  page-home .flip-clock-divider {
+    height: 38vh !important;
+    margin-top: 1vw !important;
+  }
+  page-home .flip-clock-dot.top {
+    top: 40% !important;
+  }
+  page-home .flip-clock-dot.bottom {
+    bottom: 40% !important;
+  }
+}
