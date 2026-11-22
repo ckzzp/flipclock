@@ -27929,3 +27929,21 @@ page-themes ion-content.slate .flip-clock-wrapper ul.play li.flip-clock-active .
     margin-top: -12px;
   }
 }
+
+/* ---- Wide-screen (phone landscape, > 19:10) card/digit ratio fix ----
+   On very wide viewports the original 12vw card width with a 16vw digit
+   makes the digits overflow the card vertically and sit too low.
+   Anchor everything to viewport HEIGHT so the ratio stays constant
+   however wide the screen gets. */
+@media (min-aspect-ratio: 19/10) {
+  page-home .flip-clock-wrapper ul {
+    width: 26vh !important;
+    height: 38vh !important;
+  }
+  page-home .flip-clock-wrapper ul li {
+    line-height: 35.5vh !important;
+  }
+  page-home .flip-clock-wrapper ul li a div div.inn {
+    font-size: 30vh !important;
+  }
+}
