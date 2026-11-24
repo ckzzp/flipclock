@@ -1,7 +1,7 @@
 /* Flip Clock PWA service worker */
 'use strict';
 
-var CACHE_NAME = 'flipclock-v4';
+var CACHE_NAME = 'flipclock-v5';
 var CORE_ASSETS = [
   './',
   './index.html',
