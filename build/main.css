@@ -27937,7 +27937,7 @@ page-themes ion-content.slate .flip-clock-wrapper ul.play li.flip-clock-active .
    however wide the screen gets. */
 @media (min-aspect-ratio: 19/10) {
   page-home .flip-clock-wrapper ul {
-    width: 26vh !important;
+    width: 25vh !important;
     height: 38vh !important;
   }
   page-home .flip-clock-wrapper ul li {
@@ -27977,4 +27977,16 @@ page-themes ion-content.slate .flip-clock-wrapper ul.play li.flip-clock-active .
 .flip-clock-wrapper ul.play li.flip-clock-active .down {
   -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1) !important;
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1) !important;
+}
+
+/* --- 时钟整体水平居中：6 块翻板 + 两个冒号在屏幕正中（原来 float 布局靠左，宽屏下明显偏左） --- */
+page-home .clock.flip-clock-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+page-home .clock.flip-clock-wrapper ul {
+  float: none !important;
 }
